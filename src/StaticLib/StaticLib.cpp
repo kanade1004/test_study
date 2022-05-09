@@ -8,5 +8,23 @@
 
 bool is_leap_year(int year)
 {
-	return true;
+	//4または400で割り切れるなら、うるう年
+	//4または100で割り切れるなら、平年
+	//そうでなければ、平年
+	if ((year % 400) == 0)
+	{
+		return true;
+	}
+	if ((year % 100) == 0)
+	{
+		return false;
+	}
+	else if ((year % 4) == 0)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }

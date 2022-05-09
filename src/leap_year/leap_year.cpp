@@ -6,14 +6,18 @@
 
 int main()
 {
-    int year = 2022;
+    int year[4] = { 2022,2024,2100,2000 };
 
-    if (is_leap_year(year))
+    for (int i = 0; i < 4; i++)
     {
-        std::cout << year << "年は、うるう年です\n";
-    }
-    else {
-        std::cout << year << "年は、平年です\n";
+        if (is_leap_year(year[i]))
+        {
+            std::cout << year[i] << "年は、うるう年です\n";
+        }
+        else
+        {
+            std::cout << year[i] << "年は、平年です\n";
+        }
     }
 }
 
